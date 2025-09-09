@@ -1,0 +1,46 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# IDE
+.vscode
+.idea
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Target directories
+target/
+build/
+dist/
+
+# Node modules (for frontend)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Scripts
+*.bat
+*.sh
+
+# Test files
+src/test/

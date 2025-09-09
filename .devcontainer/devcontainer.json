@@ -1,0 +1,31 @@
+{
+  "name": "AI E-commerce Platform",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [3000, 8080, 3307, 6379, 9200, 9092],
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend",
+      "onAutoForward": "notify"
+    },
+    "8080": {
+      "label": "Backend API",
+      "onAutoForward": "notify"
+    },
+    "3307": {
+      "label": "MySQL"
+    }
+  },
+  "postCreateCommand": "echo 'Codespace ready! Run: docker-compose up -d'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-java-pack",
+        "ms-vscode.vscode-spring-initializr",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
