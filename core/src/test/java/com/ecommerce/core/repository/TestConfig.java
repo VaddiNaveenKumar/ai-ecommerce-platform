@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EntityScan("com.ecommerce.core.entity")
-@EnableJpaRepositories("com.ecommerce.core.repository")
+@EnableJpaRepositories(basePackages = "com.ecommerce.core.repository", 
+                      excludeFilters = @org.springframework.context.annotation.ComponentScan.Filter(
+                          pattern = ".*SearchRepository"))
 public class TestConfig {
 }
